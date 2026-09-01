@@ -47,8 +47,16 @@ header.nav{position:sticky;top:0;z-index:80;background:rgba(255,255,255,0.86);ba
 .legal-table th{background:var(--purple-mist);color:var(--ink);font-weight:600;}
 .legal-crosslinks{display:flex;gap:16px;flex-wrap:wrap;margin-top:6px;}
 .legal-crosslinks a{font-size:13.5px;font-weight:600;}
-footer{background:var(--bg-tint);border-top:1px solid var(--line);padding:34px 0;margin-top:0;}
-.foot-bottom{display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px;font-size:12.5px;color:var(--ink-faint);}
+footer{border-top:1px solid var(--line);padding:56px 0 44px;background:var(--bg-tint);margin-top:0;}
+.foot-grid{display:flex;justify-content:space-between;flex-wrap:wrap;gap:32px;}
+.foot-brand{max-width:280px;}
+.foot-brand .logo{margin-bottom:14px;}
+.foot-brand p{font-size:13px;color:var(--ink-soft);line-height:1.6;}
+.foot-cols{display:flex;gap:56px;flex-wrap:wrap;}
+.foot-col h4{font-size:12px;text-transform:uppercase;letter-spacing:0.07em;color:var(--ink-faint);margin-bottom:14px;font-weight:600;}
+.foot-col a{display:block;font-size:13.5px;color:var(--ink-soft);text-decoration:none;margin-bottom:10px;transition:color .2s ease;}
+.foot-col a:hover{color:var(--purple);}
+.foot-bottom{margin-top:44px;padding-top:24px;border-top:1px solid var(--line);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;font-size:12.5px;color:var(--ink-faint);}
 @media(max-width:640px){.foot-bottom{flex-direction:column;}}
 </style>
 </head>
@@ -59,7 +67,7 @@ footer{background:var(--bg-tint);border-top:1px solid var(--line);padding:34px 0
     <a class="logo" href="https://www.scanmyshadow.com">
       <img src="https://www.scanmyshadow.com/logo.png" class="logo-img" alt="Scan My Shadow">
     </a>
-    <a class="nav-pill" href="https://www.scanmyshadow.com/#pricing">Start scan &middot; &#8377;498</a>
+    <a class="nav-pill" href="https://www.scanmyshadow.com/#pricing">Start scan &middot; <span class="price-tag">&#8377;498</span></a>
   </div>
 </header>
 
@@ -74,7 +82,7 @@ footer{background:var(--bg-tint);border-top:1px solid var(--line);padding:34px 0
 <div class="legal-body">
 
 <h2>01. Introduction</h2>
-<p>Scan My Shadow is a digital privacy audit service operated by Jaishree Exports, a proprietorship registered in Madhya Pradesh, India (Proprietor: Siddharth Gupta). This Privacy Policy governs how we collect, process, store, and delete personal data submitted through the service, offered at a single price of &#8377;498.</p>
+<p>Scan My Shadow is a digital privacy audit service operated by Jaishree Exports, a proprietorship registered in Madhya Pradesh, India (Proprietor: Siddharth Gupta). This Privacy Policy governs how we collect, process, store, and delete personal data submitted through the service, offered at a single price of <span class="price-tag">&#8377;498</span>.</p>
 <p>We process personal data in compliance with the Digital Personal Data Protection Act, 2023 (DPDP Act) and all other applicable Indian law.</p>
 
 <h2>02. Data Controller / Data Fiduciary</h2>
@@ -213,12 +221,50 @@ footer{background:var(--bg-tint);border-top:1px solid var(--line);padding:34px 0
 </div>
 
 <footer>
-  <div class="wrap foot-bottom">
-    <span>&copy; <span id="year"></span> Scan My Shadow &middot; A unit of Jaishree Exports</span>
-    <span><a href="https://www.scanmyshadow.com">www.scanmyshadow.com</a> &middot; support@scanmyshadow.com</span>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div class="foot-brand">
+        <a href="https://www.scanmyshadow.com" class="logo">
+          <img src="https://www.scanmyshadow.com/logo.png" class="logo-img" alt="Scan My Shadow">
+        </a>
+        <p>A private scan of your phone and email across known breaches and leaks &mdash; with a plain-language report, and we do not store the number or email you submit.</p>
+      </div>
+      <div class="foot-cols">
+        <div class="foot-col">
+          <h4>Product</h4>
+          <a href="https://www.scanmyshadow.com/#how">How it works</a>
+          <a href="https://www.scanmyshadow.com/#pricing">Pricing</a>
+          <a href="https://www.scanmyshadow.com/#faq">FAQ</a>
+          <a href="https://app.scanmyshadow.com/maya-chat.html" target="_blank" rel="noopener">Ask Maya</a>
+        </div>
+        <div class="foot-col">
+          <h4>Legal</h4>
+          <a href="https://legal.scanmyshadow.com/terms.html">Terms &amp; Conditions</a>
+          <a href="https://legal.scanmyshadow.com/privacy.html">Privacy Policy</a>
+          <a href="https://legal.scanmyshadow.com/refund.html">Refund Policy</a>
+        </div>
+        <div class="foot-col">
+          <h4>Company</h4>
+          <a href="https://www.scanmyshadow.com/about.html">About Us</a>
+          <a href="https://www.scanmyshadow.com/contact.html">Contact Us</a>
+          <a href="https://www.scanmyshadow.com/tools/digital-exposure-score/">Free Exposure Check</a>
+          <a href="https://www.scanmyshadow.com/tools/">Free Privacy Tools</a>
+        </div>
+        <div class="foot-col">
+          <h4>Support</h4>
+          <a href="mailto:support@scanmyshadow.com">support@scanmyshadow.com</a>
+          <a href="https://www.scanmyshadow.com/blog/" rel="noopener">Blog</a>
+        </div>
+      </div>
+    </div>
+    <div class="foot-bottom">
+      <span>&copy; <span id="year"></span> Scan My Shadow &middot; A unit of Jaishree Exports</span>
+      <span>Made for people who would rather know.</span>
+    </div>
   </div>
 </footer>
 <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
+<script src="https://www.scanmyshadow.com/assets/geo-price.js"></script>
 
 </body>
 </html>
